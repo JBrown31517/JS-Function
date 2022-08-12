@@ -1,44 +1,19 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-<script>
-        function max(input1, input2, input3) {
-         if(input1 > input2 && input1 > input3)
-        {   
-            let newInput1 = parseInt(input1);
-            return newInput1;
-        }
-        else if(input2 > input1 && input2 > input3)
-        {
-            let newInput2 = parseInt(input2);
-            return newInput2;
-        }
-        else if(input3 > input1 && input3 > input2)
-        {
-            let newInput3 = parseInt(input3);
-            return newInput3;
-        }
-        else 
-        {
-            let newInput1 = parseInt(input1);
-            return newInput1;
-        }
-}
-        function avg(input1, input2, input3) {
-        let x = +input1 + +input2 + +input3;
-        let z = x / 3;
-        let avgInput = parseInt(z);    
-        return avgInput;     
-}
-        let input1 = prompt("Enter a number");
-        let input2 = prompt("Enter another number");
-        let input3 = prompt("Enter another number");
-        function display(input01 = input1, input02 = input2, input03 = input3) { 
-        document.write("Maximum: " + max(input1, input2, input3) + "<br>");
-        document.write("Average: " + avg(input1, input2, input3));
-}  
-</script>  
-</head>  
-<body onload = "display()">  
-</body>  
-</html>
+Write a complete webpage with HTML and embedded JavaScript. The JavaScript code is made of 3
+functions with following function prototypes.
+
+display(3 parameters) { … } // No return, called by primary script, call other two 
+                            // functions and print their return values.
+max(3 parameters) { … } // Return the maximum of 3 parameters to caller
+avg(3 parameters) { … } // Return the average of 3 parameters to caller
+
+The primary script of this web page first reads 3 numbers from the user with proper prompt, using
+the prompt() function. Then it calls the display() function with three input numbers as parameters.
+
+Note:
+• The input should be done only inside the primary script. Otherwise, 5 points deduction will
+be applied.
+• For implementation of user-defined functions, no library functions, like Math.max() or
+Math.min(), can be used. Must use basic JavaScript statements to implement these functions.
+Otherwise, 5 points deduction will be applied for each occurrence.
+• No late submission will be accepted.
+• The webpage must run in regular browsers without error.
